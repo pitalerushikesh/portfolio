@@ -6,7 +6,7 @@ import CERT from "../../assets/projects/cert.png";
 
 export const ProjectTile = ({ img, title, desc, height, width, refs }) => {
   return (
-    <a href={refs} target="_blank">
+    <a href={refs} target="_blank" rel="noreferrer">
       <div className="card project-cards pt-3 ps-3 project-tile">
         <LazyLoadImage src={img} height={height} width={width} alt="..." />
         <div className="card-body">
