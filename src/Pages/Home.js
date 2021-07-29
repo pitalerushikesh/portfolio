@@ -17,7 +17,7 @@ const Home = () => {
   const [state, setState] = useState({
     email: "",
     name: "",
-    classn: "",
+    number: "",
     message: "",
   });
 
@@ -139,6 +139,7 @@ const Home = () => {
                       <input
                         type="text"
                         value={name}
+                        name="name"
                         onChange={handleChange("name")}
                         className="fontSource form-control input-onfocus input-round border-0"
                         placeholder="Your Name"
@@ -156,6 +157,7 @@ const Home = () => {
                       <input
                         type="number"
                         value={number}
+                        name="number"
                         onChange={handleChange("number")}
                         className="fontSource form-control input-onfocus input-round border-0"
                         placeholder="Your Contact Number"
@@ -173,6 +175,7 @@ const Home = () => {
                       <input
                         type="email"
                         value={email}
+                        name="email"
                         onChange={handleChange("email")}
                         className="fontSource form-control input-onfocus input-round border-0"
                         placeholder="Your Email Address"
@@ -183,6 +186,7 @@ const Home = () => {
                     <div className="border border-2 border-dark input-group input-round input-group-lg mt-4">
                       <textarea
                         type="text"
+                        name="message"
                         className="fontSource form-control input-onfocus input-round p-3 border-0"
                         value={message}
                         onChange={handleChange("message")}
