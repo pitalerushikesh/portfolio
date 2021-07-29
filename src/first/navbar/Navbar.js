@@ -50,14 +50,6 @@ const Navbar = () => {
                 Contact
               </a>
             </li>
-            <li className="nav-item">
-              <a
-                className="fontEncode nav-link text-dark me-5 fw-bolder"
-                href="/about"
-              >
-                About
-              </a>
-            </li>
           </ul>
         </div>
       </div>
