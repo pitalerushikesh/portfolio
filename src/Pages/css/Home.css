@@ -49,6 +49,12 @@
     cursor: pointer;
     text-decoration: none;
     color: black;
+    
+}
+
+
+.project-tile{
+    min-height: 220px;
 }
 
 a:link {
@@ -64,6 +70,16 @@ a:visited {
     
 }
 
+
+
+@media screen and (max-width:1199px) {
+
+    .project-tile{
+        min-height: 200px;
+    }
+    
+}
+
 @media screen and (max-width:767px) {
     .project-tile{
         margin-top: 25px;
@@ -72,7 +88,15 @@ a:visited {
 }
 
 
+@media screen and (max-width:447px) {
 
+    .homeButton{
+        
+        text-align: center !important;
+        margin-top: 20px !important;
+    }
+    
+}
 
 
 @media screen and (max-width:600px){
@@ -90,5 +114,6 @@ a:visited {
         width: 200px !important;
         height: 65px !important;
         font-size: 15px;
+      
     }
 }

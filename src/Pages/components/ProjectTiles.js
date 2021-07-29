@@ -8,7 +8,13 @@ export const ProjectTile = ({ img, title, desc, height, width, refs }) => {
   return (
     <a href={refs} target="_blank" rel="noreferrer">
       <div className="card project-cards pt-3 ps-3 project-tile">
-        <LazyLoadImage src={img} height={height} width={width} alt="..." />
+        <LazyLoadImage
+          src={img}
+          className="img-fluid"
+          height={height}
+          width={width}
+          alt="..."
+        />
         <div className="card-body">
           <h5 className="card-title fontMontserrat">{title}</h5>
           <p className="card-text fontLato">{desc}</p>
@@ -48,7 +54,7 @@ const ProjectTiles = () => {
                 height="80px"
                 width="80px"
                 title="Certificate Generator"
-                desc="Ipsum mollit labore velit nisi quis ut ullamco irure id ullamco voluptate."
+                desc="A React Web App Generates certificates on the click of a button."
               />
             </div>
           </div>
@@ -60,7 +66,7 @@ const ProjectTiles = () => {
                 height="80px"
                 width="80px"
                 title="Tic Tac Toe"
-                desc="Ipsum mollit labore velit nisi quis ut ullamco irure id ullamco voluptate."
+                desc="A basic X and O game which can be played against a computer and against a player."
               />
             </div>
           </div>

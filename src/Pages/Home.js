@@ -5,7 +5,7 @@ import "./css/Home.css";
 import { AiOutlineUser, AiOutlineMail } from "react-icons/ai";
 import { MdPhoneIphone } from "react-icons/md";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
+import prof from "../assets/logo/profile.png";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import Technical from "../Technical";
@@ -60,7 +60,7 @@ const Home = () => {
               className="rounded-circle border img-fluid border-4 border-dark animate__animated animate__backInDown"
               height="200px"
               width="200px"
-              src="https://i.pravatar.cc/300"
+              src={prof}
               alt="Me"
             />
           </div>
@@ -82,17 +82,34 @@ const Home = () => {
             </div>
           </div>
           <div className="container text-center mt-5 pt-4">
-            <a
-              href="#contact"
-              className="text-decoration-none text-white animate__animated animate__backInUp"
-            >
-              <button
-                type="button"
-                className="fontRoboto btn btn-dark btn-lg rounded-pill main-btn  animate__animated animate__backInUp"
-              >
-                CONNECT WITH ME
-              </button>
-            </a>
+            <div className="row">
+              <div className="col homeButton text-end">
+                <a
+                  href="#contact"
+                  className="text-decoration-none text-white animate__animated animate__bounceInLeft"
+                >
+                  <button
+                    type="button"
+                    className="fontRoboto btn btn-dark btn-lg rounded-pill main-btn  animate__animated animate__bounceInLeft"
+                  >
+                    CONNECT WITH ME
+                  </button>
+                </a>
+              </div>
+              <div className="col homeButton text-start">
+                <a
+                  href="https://github.com/pitalerushikesh/resume/raw/main/Rushikesh%20Pitale.pdf"
+                  className="text-decoration-none text-white animate__animated animate__bounceInRight"
+                >
+                  <button
+                    type="button"
+                    className="fontRoboto btn btn-dark btn-lg rounded-pill main-btn  animate__animated animate__bounceInRight"
+                  >
+                    DOWNLOAD CV
+                  </button>
+                </a>
+              </div>
+            </div>
           </div>
         </section>
         <section className="mt-5 pt-5" id="projects">
