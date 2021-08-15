@@ -10,6 +10,7 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import Technical from "../Technical";
 import ProjectTiles from "./components/ProjectTiles";
+import Social from "./components/Social";
 // ..
 AOS.init();
 
@@ -203,6 +204,11 @@ const Home = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        <section>
+          <div className="container">
+            <Social />
           </div>
         </section>
       </div>
