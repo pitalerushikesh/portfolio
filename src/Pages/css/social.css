@@ -40,9 +40,9 @@
   }
   
   .rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
-    -webkit-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -webkit-transform: rotate(360deg) !important;
+        -ms-transform: rotate(360deg) !important;
+            transform: rotate(360deg) !important;
   }
   
   .rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-youtube, .fa-instagram {
