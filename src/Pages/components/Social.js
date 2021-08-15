@@ -11,7 +11,7 @@ const Social = () => {
           target="_blank"
           rel="noreferrer"
           data-aos="zoom-in"
-          data-aos-delay="300"
+          data-aos-delay="500"
         >
           <i className="fab fa-twitter"></i>
         </a>
