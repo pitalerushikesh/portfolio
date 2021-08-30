@@ -1,12 +1,12 @@
-
-import './App.css';
+import "./App.css";
+import Preloader from "./Pages/components/Preloader";
 
 function App() {
   return (
     <div className="App">
-     <h1>
-       Hello World
-     </h1>
+      <h1>
+        <Preloader />
+      </h1>
     </div>
   );
 }
