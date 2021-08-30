@@ -2,7 +2,6 @@
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
   min-height: 100vh; /* These two lines are counted as one :-)       */
   margin-left: -70px !important;
-
   display: flex;
   align-items: center;
 }
@@ -13,7 +12,7 @@
   .vertical-center {
     min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
     min-height: 100vh; /* These two lines are counted as one :-)       */
-  margin-left: -40px !important;
+    margin-left: -40px !important;
     display: flex;
     align-items: center;
   }

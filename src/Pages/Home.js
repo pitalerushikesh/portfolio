@@ -54,7 +54,7 @@ const Home = () => {
   return (
     <Base>
       <div id="home"></div>
-      <div className="my-5 py-5">
+      <div className="my-5 main-home py-5">
         <section>
           <div className="container text-center mt-5">
             <LazyLoadImage
