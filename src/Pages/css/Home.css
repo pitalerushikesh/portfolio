@@ -67,6 +67,48 @@ a:visited {
     
 }
 
+#flutter{
+    position: absolute;
+    top: 20%;
+    right: 15%;
+    width: 07.2rem !important;
+   
+    
+}
+
+#react{
+    position: absolute;
+    top: 12%;
+    left: 12%;
+    width: 07.2rem !important;
+    
+}
+
+#javascript{
+    position: absolute;
+    top: 80%;
+    left: 06%;
+    width: 07.2rem !important;
+    
+}
+  
+@keyframes floatFlutter {
+    0% {
+        ilter: drop-shadow(0px 5px 15px rgba(0,0,0,0.75));
+        transform: translateY(0px);
+    }
+    50% {
+        filter: drop-shadow(0px 25px 15px rgba(0,0,0,0.5));
+        transform: translateY(-20px);
+    }
+    100% {
+        filter: drop-shadow(0px 5px 15px rgba(0,0,0,0.75));
+        transform: translateY(0px);
+    }
+  }
+
+
+
 
 
 @media screen and (max-width:1199px) {

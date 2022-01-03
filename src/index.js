@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import Routes from "./Routes";
 import "animate.css";
-
 import Preloader from "./Pages/components/Preloader";
 
 class App extends React.Component {

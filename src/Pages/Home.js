@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import firebase from "../firebase";
 import Base from "../first/Base";
 import "./css/Home.css";
@@ -6,11 +6,16 @@ import { AiOutlineUser, AiOutlineMail } from "react-icons/ai";
 import { MdPhoneIphone } from "react-icons/md";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import prof from "../assets/logo/profile.png";
+import flutter from "../assets/prolang/flutter.svg";
+import javascript from "../assets/prolang/javascript.svg";
+import react from "../assets/prolang/react.svg";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import Technical from "../Technical";
 import ProjectTiles from "./components/ProjectTiles";
 import Social from "./components/Social";
+import { motion } from "framer-motion/dist/framer-motion";
+
 // ..
 AOS.init();
 
@@ -21,7 +26,7 @@ const Home = () => {
     number: "",
     message: "",
   });
-
+  const constraintsRef = useRef(null);
   const { name, number, email, message } = state;
 
   const handleChange = (name) => (event) => {
@@ -55,7 +60,7 @@ const Home = () => {
     <Base>
       <div id="home"></div>
       <div className="my-5 main-home py-5">
-        <section>
+        <motion.section ref={constraintsRef}>
           <div className="container text-center mt-5">
             <LazyLoadImage
               className="rounded-circle border img-fluid border-4 border-dark animate__animated animate__backInDown"
@@ -63,6 +68,62 @@ const Home = () => {
               width="200px"
               src={prof}
               alt="Me"
+            />
+          </div>
+          <div className="draggableContent 	d-none d-xxl-block d-xl-block d-lg-block">
+            <motion.img
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                transition: { delay: 1 },
+                duration: 2,
+                rotate: 360,
+              }}
+              exit={{ opacity: 0 }}
+              key={flutter}
+              src={flutter}
+              id="flutter"
+              whileTap={{
+                scale: 0.9,
+              }}
+              drag={true}
+              dragConstraints={constraintsRef}
+            />
+            <motion.img
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                transition: { delay: 1 },
+                duration: 2,
+                rotate: 360,
+              }}
+              exit={{ opacity: 0 }}
+              key={react}
+              src={react}
+              id="react"
+              whileTap={{
+                scale: 0.9,
+              }}
+              drag={true}
+              dragConstraints={constraintsRef}
+            />
+            <motion.img
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                transition: { delay: 1 },
+                duration: 2,
+                rotate: 360,
+              }}
+              exit={{ opacity: 0 }}
+              key={javascript}
+              src={javascript}
+              id="javascript"
+              whileTap={{
+                scale: 0.9,
+              }}
+              drag={true}
+              dragConstraints={constraintsRef}
             />
           </div>
 
@@ -78,8 +139,8 @@ const Home = () => {
           </div>
           <div className="container text-center mt-2">
             <div className="fontUbuntu home-subpart animate__animated animate__backInRight">
-              Specializing in Flutter, React and Django for front end system
-              development and Firebase, MySQL for back end system development
+              Specializing in Flutter and React for front end system development
+              and Firebase, MySQL for back end system development
             </div>
           </div>
           <div className="container text-center mt-5 pt-4">
@@ -89,12 +150,30 @@ const Home = () => {
                   href="#contact"
                   className="text-decoration-none text-white animate__animated animate__bounceInLeft"
                 >
-                  <button
+                  <motion.button
+                    initial={{ x: "calc(-100vw - 50%)" }}
+                    animate={{
+                      opacity: 1,
+                      transition: { delay: 0.5 },
+                      x: 0,
+                      duration: 0.8,
+                    }}
+                    exit={{
+                      x: "calc(-100vw - 50%)",
+                      opacity: 0,
+                      duration: 0.8,
+                    }}
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{
+                      scale: 0.9,
+                      backgroundColor: "white",
+                      color: "black",
+                    }}
                     type="button"
-                    className="fontRoboto btn btn-dark btn-lg rounded-pill main-btn  animate__animated animate__bounceInLeft"
+                    className="fontRoboto btn btn-dark btn-lg rounded-pill main-btn"
                   >
                     CONNECT WITH ME
-                  </button>
+                  </motion.button>
                 </a>
               </div>
               <div className="col homeButton text-start">
@@ -102,17 +181,35 @@ const Home = () => {
                   href="https://github.com/pitalerushikesh/resume/raw/main/Rushikesh%20Pitale.pdf"
                   className="text-decoration-none text-white animate__animated animate__bounceInRight"
                 >
-                  <button
+                  <motion.button
+                    initial={{ x: "calc(100vw - 50%)" }}
+                    animate={{
+                      opacity: 1,
+                      transition: { delay: 0.5 },
+                      x: 0,
+                      duration: 0.8,
+                    }}
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{
+                      scale: 0.9,
+                      backgroundColor: "white",
+                      color: "black",
+                    }}
+                    exit={{
+                      x: "calc(100vw - 50%)",
+                      opacity: 0,
+                      duration: 0.8,
+                    }}
                     type="button"
-                    className="fontRoboto btn btn-dark btn-lg rounded-pill main-btn  animate__animated animate__bounceInRight"
+                    className="fontRoboto btn btn-dark btn-lg rounded-pill main-btn"
                   >
                     DOWNLOAD CV
-                  </button>
+                  </motion.button>
                 </a>
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
         <section className="mt-5 pt-5" id="projects">
           <ProjectTiles />
         </section>
