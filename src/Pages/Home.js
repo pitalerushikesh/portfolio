@@ -60,17 +60,17 @@ const Home = () => {
     <Base>
       <div id="home"></div>
       <div className="my-5 main-home py-5">
-        <motion.section ref={constraintsRef}>
-          <div className="container text-center mt-5">
-            <LazyLoadImage
-              className="rounded-circle border img-fluid border-4 border-dark animate__animated animate__backInDown"
-              height="200px"
-              width="200px"
-              src={prof}
-              alt="Me"
-            />
-          </div>
-          <div className="draggableContent 	d-none d-xxl-block d-xl-block d-lg-block">
+        {/* <motion.section ref={constraintsRef}> */}
+        <div className="container text-center mt-5">
+          <LazyLoadImage
+            className="rounded-circle border img-fluid border-4 border-dark animate__animated animate__backInDown"
+            height="200px"
+            width="200px"
+            src={prof}
+            alt="Me"
+          />
+        </div>
+        {/* <div className="draggableContent 	d-none d-xxl-block d-xl-block d-lg-block">
             <motion.img
               initial={{ opacity: 0 }}
               animate={{
@@ -125,91 +125,91 @@ const Home = () => {
               drag={true}
               dragConstraints={constraintsRef}
             />
-          </div>
+          </div> */}
 
-          <div className="container text-center mt-3">
-            <div className="fontSource fs-3 home-header animate__animated animate__wobble">
-              Hi, I'm Rushikesh Pitale
-            </div>
+        <div className="container text-center mt-3">
+          <div className="fontSource fs-3 home-header animate__animated animate__wobble">
+            Hi, I'm Rushikesh Pitale
           </div>
-          <div className="container text-center mt-2">
-            <div className="home-subheader fontEncode fw-bold animate__animated animate__backInLeft">
-              Full Stack Developer
-            </div>
+        </div>
+        <div className="container text-center mt-2">
+          <div className="home-subheader fontEncode fw-bold animate__animated animate__backInLeft">
+            Full Stack Developer
           </div>
-          <div className="container text-center mt-2">
-            <div className="fontUbuntu home-subpart animate__animated animate__backInRight">
-              Specializing in Flutter and React for front end system development
-              and Firebase, MySQL for back end system development
-            </div>
+        </div>
+        <div className="container text-center mt-2">
+          <div className="fontUbuntu home-subpart animate__animated animate__backInRight">
+            Specializing in Flutter and React for front end system development
+            and Firebase, MySQL for back end system development
           </div>
-          <div className="container text-center mt-5 pt-4">
-            <div className="row">
-              <div className="col homeButton text-end">
-                <a
-                  href="#contact"
-                  className="text-decoration-none text-white animate__animated animate__bounceInLeft"
+        </div>
+        <div className="container text-center mt-5 pt-4">
+          <div className="row">
+            <div className="col homeButton text-end">
+              <a
+                href="#contact"
+                className="text-decoration-none text-white animate__animated animate__bounceInLeft"
+              >
+                <motion.button
+                  initial={{ x: "calc(-100vw - 50%)" }}
+                  animate={{
+                    opacity: 1,
+                    transition: { delay: 0.5 },
+                    x: 0,
+                    duration: 0.8,
+                  }}
+                  exit={{
+                    x: "calc(-100vw - 50%)",
+                    opacity: 0,
+                    duration: 0.8,
+                  }}
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{
+                    scale: 0.9,
+                    backgroundColor: "white",
+                    color: "black",
+                  }}
+                  type="button"
+                  className="fontRoboto btn btn-dark btn-lg rounded-pill main-btn"
                 >
-                  <motion.button
-                    initial={{ x: "calc(-100vw - 50%)" }}
-                    animate={{
-                      opacity: 1,
-                      transition: { delay: 0.5 },
-                      x: 0,
-                      duration: 0.8,
-                    }}
-                    exit={{
-                      x: "calc(-100vw - 50%)",
-                      opacity: 0,
-                      duration: 0.8,
-                    }}
-                    whileHover={{ scale: 1.2 }}
-                    whileTap={{
-                      scale: 0.9,
-                      backgroundColor: "white",
-                      color: "black",
-                    }}
-                    type="button"
-                    className="fontRoboto btn btn-dark btn-lg rounded-pill main-btn"
-                  >
-                    CONNECT WITH ME
-                  </motion.button>
-                </a>
-              </div>
-              <div className="col homeButton text-start">
-                <a
-                  href="https://github.com/pitalerushikesh/resume/raw/main/Rushikesh%20Pitale.pdf"
-                  className="text-decoration-none text-white animate__animated animate__bounceInRight"
+                  CONNECT WITH ME
+                </motion.button>
+              </a>
+            </div>
+            <div className="col homeButton text-start">
+              <a
+                href="https://github.com/pitalerushikesh/pitalerushikesh/raw/main/resume.pdf"
+                className="text-decoration-none text-white animate__animated animate__bounceInRight"
+              >
+                <motion.button
+                  initial={{ x: "calc(100vw - 50%)" }}
+                  animate={{
+                    opacity: 1,
+                    transition: { delay: 0.5 },
+                    x: 0,
+                    duration: 0.8,
+                  }}
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{
+                    scale: 0.9,
+                    backgroundColor: "white",
+                    color: "black",
+                  }}
+                  exit={{
+                    x: "calc(100vw - 50%)",
+                    opacity: 0,
+                    duration: 0.8,
+                  }}
+                  type="button"
+                  className="fontRoboto btn btn-dark btn-lg rounded-pill main-btn"
                 >
-                  <motion.button
-                    initial={{ x: "calc(100vw - 50%)" }}
-                    animate={{
-                      opacity: 1,
-                      transition: { delay: 0.5 },
-                      x: 0,
-                      duration: 0.8,
-                    }}
-                    whileHover={{ scale: 1.2 }}
-                    whileTap={{
-                      scale: 0.9,
-                      backgroundColor: "white",
-                      color: "black",
-                    }}
-                    exit={{
-                      x: "calc(100vw - 50%)",
-                      opacity: 0,
-                      duration: 0.8,
-                    }}
-                    type="button"
-                    className="fontRoboto btn btn-dark btn-lg rounded-pill main-btn"
-                  >
-                    DOWNLOAD CV
-                  </motion.button>
-                </a>
-              </div>
+                  DOWNLOAD CV
+                </motion.button>
+              </a>
             </div>
           </div>
-        </motion.section>
+        </div>
+        {/* </motion.section> */}
         <section className="mt-5 pt-5" id="projects">
           <ProjectTiles />
         </section>
