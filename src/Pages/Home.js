@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import firebase from "../firebase";
 import Base from "../first/Base";
 import "./css/Home.css";
@@ -6,9 +6,9 @@ import { AiOutlineUser, AiOutlineMail } from "react-icons/ai";
 import { MdPhoneIphone } from "react-icons/md";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import prof from "../assets/logo/profile.png";
-import flutter from "../assets/prolang/flutter.svg";
-import javascript from "../assets/prolang/javascript.svg";
-import react from "../assets/prolang/react.svg";
+// import flutter from "../assets/prolang/flutter.svg";
+// import javascript from "../assets/prolang/javascript.svg";
+// import react from "../assets/prolang/react.svg";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import Technical from "../Technical";
@@ -26,7 +26,7 @@ const Home = () => {
     number: "",
     message: "",
   });
-  const constraintsRef = useRef(null);
+  // const constraintsRef = useRef(null);
   const { name, number, email, message } = state;
 
   const handleChange = (name) => (event) => {
